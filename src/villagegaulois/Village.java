@@ -50,7 +50,12 @@ public class Village {
 
 	public String[] donnerVillageois() {
 		String[] donnees = new String[nbVillageois + 1];
-		donnees[0] = chef.getNom();
+		if (chef!=null) {
+			donnees[0] = chef.getNom();
+		}
+		else {
+			donnees[0]="Pas de Chef";
+		}
 		for (int i = 0; i < nbVillageois; i++) {
 			if (villageois[i] instanceof Druide) {
 				donnees[i + 1] = "le druide " + villageois[i].getNom();
