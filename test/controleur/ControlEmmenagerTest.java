@@ -35,14 +35,16 @@ class ControlEmmenagerTest {
 	
 	@Test
 	void testAjouterDruide() {
+		assertFalse(controlEmmenager.isHabitant("Panoramix"));
 		controlEmmenager.ajouterDruide("Panoramix", 3, 10, 20);
-		assertEquals(true,controlEmmenager.isHabitant("Panoramix"));
+		assertTrue(controlEmmenager.isHabitant("Panoramix"));
 	}
 	
 	@Test
 	void testAjouterGaulois() {
+		assertFalse(controlEmmenager.isHabitant("Obélix"));
 		controlEmmenager.ajouterGaulois("Obélix", 20);
-		assertEquals(true,controlEmmenager.isHabitant("Obélix"));
+		assertTrue(controlEmmenager.isHabitant("Obélix"));
 	}
 
 }
