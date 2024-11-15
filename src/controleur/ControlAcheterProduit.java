@@ -18,7 +18,7 @@ public class ControlAcheterProduit {
 	}
 	
 	public String[] vendeursProduit(String nomProduit) {
-		String[] vendeurs=null;
+		String[] vendeurs=new String[village.rechercherVendeursProduit(nomProduit).length];
 		int i=0;
 		while (i<village.rechercherVendeursProduit(nomProduit).length) {
 			vendeurs[i]=village.rechercherVendeursProduit(nomProduit)[i].getNom();

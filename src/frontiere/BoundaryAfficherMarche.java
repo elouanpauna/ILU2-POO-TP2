@@ -13,10 +13,10 @@ public class BoundaryAfficherMarche {
 			int i=0;
 			String[] etatMarche =controlAfficherMarche.donnerInfosMarche();
 			if (etatMarche.length==0) {
-				System.out.println("Le marché est vide, revenez plus tard/n");
+				System.out.println("Le marché est vide, revenez plus tard");
 			}
 			else {
-				System.out.println(nomAcheteur+ ", vous trouverez au marché :/n");
+				System.out.println(nomAcheteur+ ", vous trouverez au marché :");
 				while (i<etatMarche.length) {
 				System.out.println("-"+ etatMarche[i]+ " qui vend " + etatMarche[i+1] + " "+ etatMarche[i+2]);
 				i+=3;

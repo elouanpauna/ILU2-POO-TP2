@@ -30,7 +30,7 @@ public class BoundaryAcheterProduit {
 				i++;
 			}
 			i=scan.nextInt();
-			String vendeur=vendeurs[i];
+			String vendeur=vendeurs[i-1];
 			if (!controlAcheterProduit.verifierIdentite(vendeur)) {
 				System.out.println("Je suis désolée "+vendeur+ " mais il faut être un habitant de notre village pour commercer ici");
 			} else {
@@ -38,15 +38,15 @@ public class BoundaryAcheterProduit {
 				System.out.println("Bonjour "+ nomAcheteur);
 				System.out.println("Combien de "+ produit+ " voulez-vous acheter?");
 				int nbAchat=scan.nextInt();
-				int nbAcheté=controlAcheterProduit.acheterProduit(vendeur, nbAchat);
-				if (nbAchat==nbAcheté) {
-					System.out.println(nomAcheteur + " achète "+nbAcheté+ " "+ produit +" à "+ vendeur);
+				int nbAchete=controlAcheterProduit.acheterProduit(vendeur, nbAchat);
+				if (nbAchat==nbAchete) {
+					System.out.println(nomAcheteur + " achète "+nbAchete+ " "+ produit +" à "+ vendeur);
 				}
-				else if (nbAcheté==0) {
+				else if (nbAchete==0) {
 					System.out.println(nomAcheteur + " veut acheter "+ nbAchat + " " + produit +", malheureusement il n'y en a plus !");
 				}
-				else if (nbAchat>nbAcheté) {
-					System.out.println(nomAcheteur + " veut acheter " + nbAchat + " " +produit +", malheureusement "+ vendeur+" n'en a plus que "+ nbAcheté + ". "+ nomAcheteur + " achète tous le stock de "+ vendeur + ".");
+				else if (nbAchat>nbAchete) {
+					System.out.println(nomAcheteur + " veut acheter " + nbAchat + " " +produit +", malheureusement "+ vendeur+" n'en a plus que "+ nbAchete + ". "+ nomAcheteur + " achète tous le stock de "+ vendeur + ".");
 				}
 				
 				
